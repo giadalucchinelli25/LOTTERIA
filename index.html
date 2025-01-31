@@ -1,13 +1,26 @@
-<script>
-  // Ottieni il parametro "id" dall'URL
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');  // Ottieni il valore di "id"
-  
-  if (id) {
-    // Se il parametro "id" esiste, mostra il numero
-    document.getElementById('messaggio').innerHTML = `Ciao! Il tuo numero è: ${id}.`;
-  } else {
-    // Se il parametro "id" non è trovato, mostra un errore
-    document.getElementById('messaggio').innerHTML = 'Errore: numero non trovato.';
-  }
-</script>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lotteria</title>
+</head>
+<body>
+  <h1>Benvenuto alla Lotteria!</h1>
+  <p id="messaggio">Sto recuperando il tuo numero...</p>
+
+  <script>
+    // Ottieni il parametro "id" dall'URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');  // Ottieni il valore di "id"
+    
+    if (id) {
+      // Se il parametro "id" esiste, mostra il numero
+      document.getElementById('messaggio').innerHTML = `Ciao! Il tuo numero è: ${id}.`;
+    } else {
+      // Se il parametro "id" non è trovato, mostra un errore
+      document.getElementById('messaggio').innerHTML = 'Errore: numero non trovato.';
+    }
+  </script>
+</body>
+</html>
